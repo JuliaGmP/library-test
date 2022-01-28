@@ -2,10 +2,10 @@
 
 ## Run the application
 
-``shell
+```bash
 docker-compose build
 docker-compose up
-``
+```
 
 ## Backend - Loopback
 

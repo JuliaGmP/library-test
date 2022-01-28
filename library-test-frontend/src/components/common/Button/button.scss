@@ -1,0 +1,33 @@
+
+.button-component {
+    background-color: #76a142;
+    padding: 16px 12px 16px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    text-decoration: none;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+
+    &.cancel {
+        background-color: red;
+    }
+
+    &.marginRight{
+        margin-right: 10px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}

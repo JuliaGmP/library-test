@@ -1,0 +1,26 @@
+version: '2' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  postgres:
+    container_name: postgres     
+    image: postgres # specify the image to build container from
+    environment:
+      POSTGRES_PASSWORD : pass
+      POSTGRES_USER : postgres
+    ports:
+      - "5432:5432"
+
+  loopback: # name of second service
+    build: ./library-test-backend # specify the directory of the Dockerfile
+    ports:
+      - "3000:3000" # specify port mapping
+    depends_on:
+      - postgres
+    environment:
+      POSTGRESQL_URL: postgres://postgres:pass@postgres:5432/postgres
+
+  react: # name of third service
+      build: ./library-test-frontend # specify the directory of the Dockerfile
+      ports:
+        - "3006:3006" #specify port mapping

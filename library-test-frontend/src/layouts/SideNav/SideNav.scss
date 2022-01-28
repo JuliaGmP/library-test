@@ -1,0 +1,40 @@
+
+.sidenav-component {
+    height: 100%;
+    width: 100%;
+    box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 10px;
+
+    background-color: #292F36;
+    .nav-item {
+        margin:30px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        // justify-content: center;
+        text-decoration: none;
+        background-color: #76a142;
+        border-radius: 19px;
+
+        img {
+            object-fit: contain;
+            width: 25px;
+            margin-right: 20px;
+        }
+
+        &.active {
+            border-left: 3px solid;
+            border: none;
+            border-radius: 19px;
+            background-color: #e65e46;
+        }
+        &:hover {
+            border-left: 3px solid;
+            border: none;
+            border-radius: 19px;
+            background-color: #e65e46;
+        }
+    }
+}

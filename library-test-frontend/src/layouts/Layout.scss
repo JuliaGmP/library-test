@@ -1,0 +1,35 @@
+
+
+.layout-component {
+    display: grid;
+    grid-template:
+        "header header"
+        "sidenav content";
+    grid-gap: 0px;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 80px 2fr;
+    height: 100%;
+
+    & * {
+        box-sizing: border-box;
+    }
+
+    header {
+        z-index: 2;
+        grid-area: header;
+        background-color: #757575;
+    }
+
+    .sidenav {
+        z-index: 1;
+        grid-area: sidenav;
+    }
+    .content {
+        background-color: #white;
+        grid-area: content;
+        overflow: auto;
+        min-height: 100%;
+    }
+
+
+}

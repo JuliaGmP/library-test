@@ -1,0 +1,10 @@
+.category-component-container{
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+
+    .button-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
